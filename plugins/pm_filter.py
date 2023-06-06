@@ -1114,7 +1114,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.delete()
         except:
             await query.answer("something went wrong", show_alert = True)
-            return 
+            return    
+  
         
     elif query.data.startswith("setgs"):
         ident, set_type, status, grp_id = query.data.split("#")
